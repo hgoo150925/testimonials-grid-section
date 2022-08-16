@@ -1,1 +1,3 @@
-# learn-grid-the-easy-way
+# Testimonials grid section
+
+<img src="./design/desktop-design.jpg"/>
