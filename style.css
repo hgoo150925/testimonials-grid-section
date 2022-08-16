@@ -6,7 +6,7 @@
   --clr-neutral-200: 210 46% 95%;
   --clr-neutral-300: 0 0% 81%;
 
-  --ff-primary: "Barlow Semi Condensed", sans-serif;
+  --ff-primary: 'Barlow Semi Condensed', sans-serif;
 
   --fw-400: 500;
   --fw-700: 600;
@@ -38,8 +38,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -142,13 +142,23 @@ h3 {
   border: 2px solid #a775f1;
 }
 
+.grid-col-span-2 {
+  grid-column: span 2;
+}
 /* components */
 .testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
 }
-
+.testimonial:last-child {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 .testimonial {
   font-size: var(--fs-400);
   padding: 2rem;
@@ -157,7 +167,7 @@ h3 {
 }
 
 .testimonial.quote {
-  background-image: url("./images/bg-pattern-quotation.svg");
+  background-image: url('./images/bg-pattern-quotation.svg');
   background-repeat: no-repeat;
   background-position: top right 10%;
 }
